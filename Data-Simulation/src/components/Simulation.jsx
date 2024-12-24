@@ -186,7 +186,7 @@ export default function Simulation({
         console.log(markers.current.getLatLng());
 
         const payload = {
-          Gps_Status: "Active",
+          Gps_Status: true,
           long: markers.current.getLatLng().lng.toString(),
           lat: markers.current.getLatLng().lat.toString(),
           alt: "0",
@@ -195,7 +195,7 @@ export default function Simulation({
           speed: `${speed}`,
         };
 
-        const apiEndpoint = `${config.baseUrl}:8443/test/trackAPI/device/${deviceId}/addLocation`;
+        const apiEndpoint = `${config.baseUrl}:8443/test/trackAPI/device/postLocation/${deviceId}`;
 
         const res = await axios.post(apiEndpoint, payload);
       } catch (error) {
