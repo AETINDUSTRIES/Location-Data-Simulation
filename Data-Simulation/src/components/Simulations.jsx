@@ -35,6 +35,7 @@ export default function Simulations({openNewSimulForm,setOpenedSimulationDetails
                     samplingDuration={simulation.samplingDuration}
                     simulationDuration={simulation.simulationDuration}
                     distance={simulation.distance}
+                    deviceId={simulation.deviceId}
                     setOpenedSimulationDetails={setOpenedSimulationDetails}/>
                 })}
                 {simulations.length===0 && <p className="big" > No simulations to show </p>}

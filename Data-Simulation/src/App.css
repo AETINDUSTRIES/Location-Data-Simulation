@@ -235,6 +235,7 @@ form{
   border-width: 0.2px;
   background-color: #fcfdff;
   outline: none;
+  color: black
 }
 
 .input-field:focus {
